@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
   def index
-    render json: { message: 'ok' }
+    @projects = Project.includes(:todos).all
+
+    render json: @projects
   end
 end

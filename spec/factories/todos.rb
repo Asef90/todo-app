@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :todo do
     text { "MyString" }
-    isCompleted { false }
+    is_completed { false }
+    project { nil }
   end
 end
